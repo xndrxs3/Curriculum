@@ -119,8 +119,97 @@ nav {
     box-shadow: 0 8px 32px rgba(31, 84, 97, 0.46);
 }
 
+/* =========================EDUCATION============================*/
+
+.section-education{
+    background-color: #becae2;
+}
+.section-education .tittle{
+    display: block;
+    margin: 15px 0;
+    width: 100%;
+    text-align: center;
+    text-transform: uppercase;
+}
+.content-education{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    padding-bottom: 30px;
+}
+.education{
+    background-color: #fff;
+    border-radius: 8px;
+    padding: 30px;
+}
+.education i{
+    border-radius: 50%;
+    border: 2px solid #6cbdff;
+    background-color: #6cbdff;
+    color: #fff;
+    width: 40px;
+    height: 40px;
+    font-size: 22px;
+    text-align: center;
+    line-height: 36px;
+}
+.education:hover{
+    background-color: #6cbdff;
+    box-shadow: 0 0 8px #5d6678;
+    transition: all ease-in-out .4s;
+    color: #fff;
+}
+.content-education .education a{
+    color: #939eb4;
+    font-size: 12px;
+    text-decoration: none;
+}
+/*######################### CERTIFICATES #######################*/
+
+.section-certificates .tittle{
+    display: block;
+    margin: 15px 0 0 0;
+    width: 100%;
+    text-align: center;
+    text-transform: uppercase;
+}
+.content-certificate{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    padding-bottom: 30px;
+}
+.certificates{
+ width: 22%;
+ border-radius: 5px;
+ border: 2px solid #6cbdff;
+ padding: 15px;
+ text-align: center;
+ margin-top: 15px;
+}
+.certificates img{
+    height: 100px;
+    width: auto;
+}
+.certificates a{
+    font-size: 12px;
+    color: gray;
+    text-decoration: none;
+}
+.certificates:hover{
+    background-color: #6cbdff;
+    box-shadow: 0 0 8px #5d6678;
+    transition: all ease-in-out .4s;
+    color: #fff;
+    transform: scale(1.1);
+}
+.certificates a:hover{
+    color: #fff;
+}
+
+
 /*######################### PIE DE PAGINA #######################*/
-footer{
+ footer{
     background-color: rgba(70,70,70);
     padding: 50px 0 20px 0;
     overflow: hidden;
