@@ -46,6 +46,7 @@ nav {
 .enlaces-header {
     font-weight: 300;
     margin: auto;
+    transition: all ease-in-out .6s;
 }
 
 .nav .enlaces-header a {
@@ -55,7 +56,18 @@ nav {
     padding: 12px;
     border-radius: 10px;
 }
-
+.hamburger{
+    height: 80px;
+    width: 80px;
+    text-align: center;
+    z-index: 100;
+    cursor: pointer;
+    display: none;
+}
+.hamburger>i{
+    font-size: 25px;
+    line-height: 80px;
+}
 .nav .enlaces-header a:hover {
     color: #fff;
     background-color: #6cbdff;
@@ -294,5 +306,77 @@ nav {
 .social-media > a > i:hover{
     background-color: #6cbdff;
     border-color: #6cbdff;
+
+}
+/*######################### BREAK POINTS #######################*/
+@media screen and (max-width:700px){
+.hamburger{
+    display: block;
+}
+.enlaces-header{
+    position: fixed;
+    background-color: #6cbdff;
+    top: 0;
+    right: 0;
+    width: 100%;
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    clip-path: circle(0.0% at 0 0);
+}
+.nav .hamburgeropen{
+    clip-path: circle(150% at 0 0);
+}
+.nav .enlaces-header a{
+    color: #fff;
+    background-color: #9dd2fe;
+    text-transform: uppercase;
+    font-weight: 800;
+    width: 50%;
+    text-align: center;
+    margin-top: 20px;
+}
+h1{
+    font-size: 28px;
+    margin-top: 20px;
+}
+.textos-header{
+    margin: 0px;
+}
+.contenido-header{
+    display: block;
+    height: auto;
+    margin-bottom: 15px;
+}
+.contenido-header > img{
+    margin: 25px 0 0 0 ;
+    width: 150px;
+    height: 150px;
+}
+/* ========================= SECTION EDUCATION============================*/
+.education{
+    width: 80%;
+    margin-bottom: 15px;
+}
+/* ========================= SECTION CERTIFICATES============================*/
+.certificates{
+    width: 50%;
+}
+.certificates img{
+    height: 80px;
+}
+/* ========================= SECTION CERTIFICATES============================*/
+.partFooter img{
+    display: none;
+}
+.partFooter{
+    width: 90%;
+}
+
+
+
+
+
 
 }
