@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        body{
+            font-family: Arial, Helvetica, sans-serif;
+        }
+        div{
+            text-align: center;
+        }
+        input{
+            margin-bottom:15px;
+        }
+        label{
+            display: block;
+            margin-bottom: 15px;
+        }
+    </style>
+</head>
+<body>
+    
+    <div>
+        <input type= "text" id="entrada" placeholder="Ingrese numero">
+        <button id="btn" onclick="calcular()">Calcular</button>
+        <label for="FORM_ELEMENT" id="resultado">1</label>
+        <label for="FORM_ELEMENT" class="etiquetas">2</label>
+        <label for="FORM_ELEMENT" class="etiquetas">3</label>
+    </div>
+    <script>
+
+        function calcular(){
+            var entradaInput = document.getElementById("entrada").value;
+            const numeros = [0, 1]
+            if(isNaN(entradaInput) == true ||  entradaInput == 0 || entradaInput.trim() === ""){
+            alert("Ingrese un valor numerico")
+            }
+
+            var a = 1;
+            for(let i = 0; i <= entradaInput; i++){
+            var suma = numeros[i] + numeros[a]
+            a++;
+            i++;
+            numeros.push(suma)
+        }
+            for(let i of a)
+            console.log(i)
+
+        }
+
+    </script>
+</body>
+</html>
