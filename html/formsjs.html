@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <form action="" id="form">
+        <h1>Registro</h1>
+        <div class="grupo">
+            <label for="">NAME</label>
+            <INPut type="text" id="name"></INPut>
+        </div>
+        <div class="grupo">
+            <label for="">PASSWORD</label>
+            <INPut type="password" id="password"></INPut>
+        </div>
+        <div class="grupo">
+            <label for="">EMAIL</label>
+            <INPut type="email" id="email"></INPut>
+        </div>
+        <BUtton type="submit">ENVIAR</BUtton>
+        <p id="Espacioinfo"></p>
+    </form>
+    <script>
+        const form        = document.getElementById("form");
+        const name        = document.getElementById("name");
+        const password    = document.getElementById("password");
+        const email       = document.getElementById("email");
+        const espacioinfo = document.getElementById("Espacioinfo");
+         form.addEventListener("submit", event=>{
+            event.preventDefault();
+            let val_email = /^\w+([\.-]?\w+)*@\w+([\.-]?\w+)*(\.\w{2,3})+$/;
+            let info = "";
+            let validar = false;
+            if(name.value.length < 3){
+                info += "Nombre demasiado corto \n";
+                validar = true;
+            }
+            if(password.value.length < 8){  
+                info += "Password demasiado corta \n";
+                validar = true;
+            }
+            if(!val_email.test(email.value)){
+                info += "Email invalido \n";
+                validar = true;
+            }
+            if(validar){
+                Espacioinfo.innerText = info;
+                Espacioinfo.style.color = "red";
+            }
+            else{
+                Espacioinfo.innerText = "Enviado con exito";
+                Espacioinfo.style.color = "green";
+            }
+         })
+    </script>
+</body>
+</html>
