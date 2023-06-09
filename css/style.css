@@ -244,7 +244,6 @@ nav {
     display: flex;
     margin: auto;
     width: 90%;
-    height: 500px;
     text-align: left;
     align-items: center;
 }
@@ -260,12 +259,12 @@ nav {
 }
 #img-izquierda{
     height: 100%;
-    width: 300px;
+    width: 250px;
     border-radius: 5px;
 }
 #img-derecha{
     height: 100%;
-    width: 300px;
+    width: 250px;
     border-radius: 5px;
 }
 
@@ -423,10 +422,16 @@ h1{
 .partFooter{
     width: 90%;
 }
-
-
-
-
-
-
+/* ========================== SECTION INFO ========================*/
+.content-info {
+    flex-wrap: wrap;
+    height: min-content;
+    justify-content: center;
+}
+.content-info #img-derecha{
+    display: none;
+}
+.content-info #img-izquierda{
+    border-radius: 50%;
+}
 }
